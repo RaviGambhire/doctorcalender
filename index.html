@@ -69,8 +69,8 @@
 <script type="text/javascript" src="./html2canvas.min.js"></script>
 
  <script type="text/javascript">
-    var pdf = new jsPDF('landscape');
-
+    var pdf = new jsPDF('p', 'pt', 'a4');
+    var data = document.getElementById('page');
     function saveDoc() {
         window.html2canvas = html2canvas
         const doc = document.getElementById('page');
@@ -80,7 +80,8 @@
             console.log(doc);
             console.log("hellowww");
 
-            pdf.html(document.getElementById('page'), {
+            pdf.html(data,{scrollY: -window.scrollY, 
+   scale: 1} , {
                 callback: function (pdf) {
                     pdf.save('DOC.pdf');
                 }
