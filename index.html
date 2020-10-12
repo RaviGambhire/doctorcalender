@@ -80,8 +80,7 @@
             console.log(doc);
             console.log("hellowww");
 
-            pdf.html(data,{scrollY: -window.scrollY, 
-   scale: 1} , {
+            pdf.html(data, {
                 callback: function (pdf) {
                     pdf.save('DOC.pdf');
                 }
