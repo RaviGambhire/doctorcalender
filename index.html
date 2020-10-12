@@ -80,7 +80,7 @@
             console.log(doc);
             console.log("hellowww");
 
-            pdf.html(data, {
+            pdf.html(document.getElementById('page'), {
                 callback: function (pdf) {
                     pdf.save('DOC.pdf');
                 }
